@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
 }
 
@@ -43,4 +43,100 @@ main {
 h1 {
   font-weight: bold;
   font-size: 1.5rem;
+} */
+*,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace
+}
+
+body {
+    height: calc(100vh - 40px);
+    height: 100%;
+    background-color: hsl(185, 41%, 84%);
+}
+button, input {
+    border: none;
+} 
+
+.container {
+
+    width: 100vw;
+    height: calc(100vh - 40px);
+}
+
+.card {
+    max-width: 1440px;
+    width: 55vw;
+    margin: 4rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5 0 0 #0000;
+    display: flex;
+}
+
+.editable {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: space-evenly;
+    padding-right: 1.5rem;
+}
+
+.answer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    padding-left: 0;
+    background-color: hsl(183, 100%, 15%);
+    gap: 2rem;
+    border-radius: 12px;
+}
+.first-input, .second-input, .third-input {
+    display: flex;
+    flex-direction: column; 
+    gap: 0.5rem;
+}
+label{ 
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+}
+input {
+    display: flex;
+    height: 35px;
+    background-color: hsl(189, 41%, 97%);
+    width: 100%;
+    border-radius: 8px;
+}
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 0.5rem;
+}
+.buttons-container > button{
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+    width: 90px;
+    height: 35px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 900;
+}
+.percentage-btn { 
+    
+    background-color: hsl(183, 100%, 15%);
+    color: #fff;
+}
+.custom-btn {
+    font-size: 18px;
 }

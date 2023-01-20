@@ -1,23 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
     <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style src="./styles.css">
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
   </head>
   <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
+    <div class="container">
+      <div class="card">
+        <div class="editable">
+          <div class="first-input">
+            <label for="bill">
+              Bill
+            </label>
+            <input type="text" />
+          </div>
+          <div class="second-input">
+            <label for="selectTip">
+              Select Type %
+            </label>
+              <div class="buttons-container">
+                <button class="percentage-btn"><p>5%</p></button>
+                <button class="percentage-btn"><p>10%</p></button>
+                <button class="percentage-btn"><p>15%</p></button>
+                <button class="percentage-btn"><p>25%</p></button>
+                <button class="percentage-btn"><p>50%</p></button>
+                <button class="custom-btn"><p>Custom</p></button>
+              </div>
+            </label>
+          </div>
+          <div class="third-input">
+            <label for="numberPeople">
+              Number of People
+            </label>
+            <input type="text'" />
+          </div>
+        </div>
+        <div class="answer">
+          <section class="informations">
+            <div class="tip">
+              <label for="tip">Tip Amount<p>/ person</p></label>
+              <h2>${{tipAmount}}</h2>
+            </div>
+            <div class="total">
+             <label for="totalAmount"></label> Total <p>/ person</p>
+             <h2>${{ totalAmount }}</h2>
+            </div>
+          </section>
+          <section class="button">
+            <button class="reset-btn">Reset</button>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
   </body>
 </html>
