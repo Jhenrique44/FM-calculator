@@ -46,97 +46,152 @@ h1 {
 } */
 *,
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: monospace
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
 }
 
 body {
-    height: calc(100vh - 40px);
-    height: 100%;
-    background-color: hsl(185, 41%, 84%);
+  height: 100%;
+  background-color: hsl(185, 41%, 84%);
 }
-button, input {
-    border: none;
-} 
+button,
+input {
+  border: none;
+}
 
 .container {
-
-    width: 100vw;
-    height: calc(100vh - 40px);
+  width: 100vw;
+  height: calc(100vh - 40px);
 }
 
 .card {
-    max-width: 1440px;
-    width: 55vw;
-    margin: 4rem auto;
-    padding: 1.5rem;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5 0 0 #0000;
-    display: flex;
+  max-width: 1440px;
+  width: 55vw;
+  min-width: 400px;
+  margin: 4rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5 0 0 #0000;
+  display: flex;
 }
 
 .editable {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    justify-content: space-evenly;
-    padding-right: 1.5rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-evenly;
+  padding-right: 1.5rem;
 }
 
 .answer {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1.5rem;
-    padding-left: 0;
-    background-color: hsl(183, 100%, 15%);
-    gap: 2rem;
-    border-radius: 12px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: hsl(183, 100%, 15%);
+  gap: 2rem;
+  border-radius: 12px;
 }
-.first-input, .second-input, .third-input {
-    display: flex;
-    flex-direction: column; 
-    gap: 0.5rem;
+.first-input,
+.second-input,
+.third-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
-label{ 
-    font-family: monospace;
-    font-size: 20px;
-    font-weight: 700;
-    color: hsl(186, 14%, 43%);
+label {
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(186, 14%, 43%);
 }
 input {
-    display: flex;
-    height: 35px;
-    background-color: hsl(189, 41%, 97%);
-    width: 100%;
-    border-radius: 8px;
+  display: flex;
+  height: 35px;
+  background-color: hsl(189, 41%, 97%);
+  width: 100%;
+  border-radius: 8px;
+  padding-left: 15px;
 }
 .buttons-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    gap: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 0.5rem;
 }
-.buttons-container > button{
-    display: flex;
-    justify-content: center;
-    align-items: center;;
-    width: 90px;
-    height: 35px;
-    border-radius: 6px;
-    font-size: 18px;
-    font-weight: 900;
+.buttons-container > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 35px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
 }
-.percentage-btn { 
-    
-    background-color: hsl(183, 100%, 15%);
-    color: #fff;
+.percentage-btn {
+  background-color: hsl(183, 100%, 15%);
+  color: #fff;
 }
 .custom-btn {
-    font-size: 18px;
+  font-size: 18px;
 }
+.informations {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.informations > div > label {
+  font-size: 12px;
+  color: #fff;
+}
+
+.informations > div > label > p {
+  color: hsl(185, 41%, 84%);
+  font-size: 10px;
+}
+.tip,
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tip,
+.total > h2 {
+  display: flex;
+  font-weight: bolder;
+  color: hsl(186, 14%, 43%);
+}
+.reset-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.reset-button > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  border-radius: 4px;
+  background-color: hsl(186, 14%, 43%);
+  color: hsl(183, 100%, 15%);
+}
+
+/* 
+Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Very light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%)
+ */
