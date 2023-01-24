@@ -29,24 +29,24 @@
   <body>
     <div class="container">
       <div class="card">
-        <div class="editable">
+        <form class="editable">
           <div class="first-input">
             <label for="bill">
               Bill
             </label>
-            <input type="text"  />
+            <input class="bill-insert" type="number" id="bill-value"/>
           </div>
           <div class="second-input">
             <label for="selectTip">
               Select Type %
             </label>
               <div class="buttons-container">
-                <button class="percentage-btn"><p>5%</p></button>
-                <button class="percentage-btn"><p>10%</p></button>
-                <button class="percentage-btn"><p>15%</p></button>
-                <button class="percentage-btn"><p>25%</p></button>
-                <button class="percentage-btn"><p>50%</p></button>
-                <button class="custom-btn"><p>Custom</p></button>
+                <button class="percentage-btn" onclick="percentageCalc(5)"><p>5%</p></button>
+                <button class="percentage-btn" onclick="percentageCalc(10)"><p>10%</p></button>
+                <button class="percentage-btn" onclick="percentageCalc(15)"><p>15%</p></button>
+                <button class="percentage-btn" onclick="percentageCalc(25)"><p>25%</p></button>
+                <button class="percentage-btn" onclick="percentageCalc(50)"><p>50%</p></button>
+                <!-- <input placeholder="Custom" class="custom-btn" onchange="percentageCalc(value)"/> -->
               </div>
             </label>
           </div>
@@ -54,22 +54,22 @@
             <label for="numberPeople">
               Number of People
             </label>
-            <input type="text'" />
+            <input type="number" id="people"/>
           </div>
-        </div>
+        </form>
         <div class="answer">
           <section class="informations">
             <div class="tip">
               <label for="tip">Tip Amount<p>/ person</p></label>
-              <h2>$ 00.00</h2>
+              <h2 id="tipAmount"></h2>
             </div>
             <div class="total">
              <label for="totalAmount"> Total <p>/ person</p></label>
-             <h2>$ 00.00</h2>
+             <h2 id="totalPerson"></h2>
             </div>
           </section>
           <section class="reset-button">
-            <button class="reset-btn">Reset</button>
+            <!-- <button class="reset-btn" type="reset">Reset</button> -->
           </section>
         </div>
       </div>
@@ -82,6 +82,14 @@
     </div>
   </body>
   <script>
-    
+    function percentageCalc(percentage) {
+      const bill = document.getElementById("bill-value").value;
+      const tipAmount = Math.round((bill / 100 ) * percentage);
+      const people = document.getElementById("people").value;
+      const totalPerson = (bill / people) + tipAmount;
+      console.log("bill", bill, "tipAmount", tipAmount,  "people", people, "totalEach", totalPerson);
+      document.getElementById("tipAmount").innerHTML = "$" + tipAmount;
+      document.getElementById("totalPerson").innerHTML = "$" + totalPerson;
+    };
   </script>
 </html>
